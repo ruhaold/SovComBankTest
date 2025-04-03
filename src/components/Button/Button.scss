@@ -1,0 +1,43 @@
+.button {
+    @include flex-center(true);
+
+    column-gap: 10px;
+    font-weight: 500;
+    color: var(--color-white);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+
+    &:active {
+        scale: 1.05;
+    }
+
+    &:disabled {
+        color: var(--color-gray);
+        background-color: var(--color-black-06);
+        pointer-events: none;
+    }
+
+    &:has(.button__icon:only-child) {
+       padding: 0;
+    }
+
+    &--transparent {
+        background-color: transparent;
+
+        &:has(.button__icon:only-child) {
+            @include square(44px);
+
+            .button__icon {
+                --iconSize: #{fluid-to-laptop(34, 24)};
+            }
+        }
+    }
+    
+    &--tel {
+        svg {color: var(--color-green); fill: var(--color-green);}
+    }
+
+
+}

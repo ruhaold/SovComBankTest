@@ -1,0 +1,25 @@
+:root {
+  --color-white: #FAFAFA;
+  --color-black: #131417;
+
+  --color-orange: #F2994A;
+  --color-green: #5BC12C;
+  --color-red: #EB5757;
+  --color-gray: #252830;
+ 
+
+ 
+
+  --font-family-base: 'Manrope', sans-serif;
+
+  --container-width: #{fluid-to-laptop(
+    $container-desktop-width,
+    $container-laptop-width
+  )};
+  --container-padding-x: 20px;
+
+  --section-padding-y: #{fluid(75, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}
